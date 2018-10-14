@@ -5,7 +5,7 @@ class Dishes
   def initialize(name, price)
     @name = name
     @price = price
-    @quantity = 1
+    @quantity = 0
   end
 
   def up_quantity

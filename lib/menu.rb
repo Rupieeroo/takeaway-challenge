@@ -4,13 +4,20 @@ class Menu
 
   def initialize
     @list = []
+    @order = []
   end
 
-  def add_dish(dish)
+  def dish(dish)
     @list << {name: dish.name, price: dish.price, quantity: dish.quantity}
   end
 
-  def list
+  def menu_list
+    @list.each do |item|
+      return item
+    end
+  end
+
+  def view_menu
     @list.each do |dish|
       return "#{dish[:name]}: £#{dish[:price]}"
     end
